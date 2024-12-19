@@ -221,7 +221,7 @@
         <columns>
             <column>
                 <h4>Props</h4>
-                <table class="table is-fullwidth">
+                <table class="table is-fullwidth is-striped is-bordered">
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -229,7 +229,7 @@
                             <th>Default</th>
                         </tr>
                     </thead>
-                    <thead>
+                    <tbody>
                         <tr>
                             <td>required</td>
                             <td>Boolean</td>
@@ -280,7 +280,7 @@
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
-                    </thead>
+                    </tbody>
                 </table>
             </column>
         </columns>

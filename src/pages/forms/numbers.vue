@@ -1,22 +1,25 @@
 <template>
     <div class="content">
-        <h1>Radio Input</h1>
+        <h1>Number Input</h1>
         <columns>
             <column>
                 <columns>
                     <column>
                         <h4>Basics</h4>
                         <p>
-                            In it's most basic form a <span class="has-text-weight-bold">radio-input</span> component can
-                            be used with nothing more than v-model and a
-                            label if required. The default component slot is used for label text.
+                            The <span class="has-text-weight-bold">number-input</span> inherits all functionality from the
+                            <span class="has-text-weight-bold">text-input</span> component, however, it only allows for the input
+                            of numerical values.
                         </p>
                     </column>
                 </columns>
-
                 <columns>
                     <column>
                         <number-input 
+                            required
+                            :decimals="2"
+                            :min="0"
+                            :max="1000"
                             v-model="age">
                             Age
                         </number-input>
@@ -51,9 +54,14 @@
                             <td>2</td>
                         </tr>
                         <tr>
-                            <td>currency</td>
-                            <td>String</td>
-                            <td>$</td>
+                            <td>min</td>
+                            <td>Number</td>
+                            <td>null</td>
+                        </tr>
+                        <tr>
+                            <td>max</td>
+                            <td>Number</td>
+                            <td>null</td>
                         </tr>
                         <tr>
                             <td>required</td>
@@ -110,11 +118,14 @@
 import { computed, ref } from 'vue'
 
 
-const age = ref(21)
+const age = ref(50)
 
 const inputExample = computed(() => {
     return `<number-input
-    placeholder="21"
+    :decimals="2"
+    :min="0"
+    :max="1000"
+    placeholder="50"
     v-model="${age.value}">
     Age
 </number-input>`
