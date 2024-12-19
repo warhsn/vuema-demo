@@ -1,0 +1,135 @@
+$family-primary: "Inter", serif !default;
+
+@use "bulma/sass" as bulma;
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Inter:opsz@14..32&display=swap');
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+.page-wrap {
+    height: calc(100vh);
+    display: grid;
+    grid-template-columns: minmax(10px, 0.6fr) minmax(10px, 3.4fr);
+    grid-template-rows: min-content min-content 1fr min-content;
+    gap: 1px;
+
+    >* {
+        padding: 1rem;
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+
+        >* {
+            grid-column: 1 / -1 !important;
+            grid-row: auto !important;
+        }
+    }
+}
+
+.page-header {
+    grid-column: 1 / -1;
+    border-bottom: 1px solid bulma.$grey-dark;
+}
+
+.page-sidebar {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+}
+
+.page-nav {
+    grid-column: 2 / 3;
+}
+
+.page-main {
+    grid-column: 2 / 3;
+}
+
+.page-footer {
+    grid-column: 1 / -1;
+}
+
+details p {
+    text-transform: none;
+    text-align: left;
+}
+
+.b-date-picker {
+    .b-date-picker-window {
+        position: absolute;
+        width: 305px;
+        left: -40px;
+    }
+}
+
+.arrow {
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    text-indent: -9999px;
+    border-top: 2px solid #bfbfbf;
+    border-left: 2px solid #bfbfbf;
+    transition: all 150ms ease-in-out;
+    text-decoration: none;
+    color: transparent;
+}
+
+.arrow:hover {
+    border-color: gray;
+    border-width: 3px;
+}
+
+.arrow:before {
+    display: block;
+    height: 200%;
+    width: 200%;
+    margin-left: -50%;
+    margin-top: -50%;
+    content: "";
+    transform: rotate(45deg);
+}
+
+.arrow.prev {
+    transform: rotate(-45deg);
+    left: 0;
+}
+
+.arrow.next {
+    transform: rotate(135deg);
+    right: 0;
+}
+
+.arrow.up {
+    transform: rotate(45deg);
+    left: 175px;
+}
+
+.arrow.down {
+    transform: rotate(-135deg);
+    right: 175px;
+}
+
+.content pre {
+    padding: 0;
+}
+
+pre {
+    background-color: transparent;
+    padding: 0;
+}
+
+.logo-text {
+    font-family: "Borel", serif;
+    font-size: 2.5rem;
+    background: #00D1B2;
+    background: repeating-linear-gradient(to right, #00D1B2 0%, #66D1FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.theme-button {
+    margin-top: -0.06rem;
+}
