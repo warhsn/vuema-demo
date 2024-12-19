@@ -18,7 +18,6 @@
                     <column>
                         <select-input
                             :items="items"
-                            left-icon="eye"
                             value-key="id"
                             label-key="name">
                             Options
@@ -119,7 +118,7 @@ const items = ref([
 
 const inputExample = () => {
     return `<select-input
-    items="items"
+    :items="items"
     value-key="id"
     label-key="name"
     v-model="product.price">

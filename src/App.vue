@@ -13,7 +13,8 @@
           />
           <b-icon
             v-else
-            icon="moon" 
+            icon="moon"
+            icon-type="fas"
             class="has-text-info"
           />
         </action-button>

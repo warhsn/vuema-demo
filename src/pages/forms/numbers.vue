@@ -117,7 +117,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 
-
 const age = ref(50)
 
 const inputExample = computed(() => {

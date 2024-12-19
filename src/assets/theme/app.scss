@@ -32,7 +32,7 @@ body {
 
 .page-header {
     grid-column: 1/-1;
-    border-bottom: 1px solid hsl(221, 14%, 29%);
+    border-bottom: 1px solid bulma.$grey-light;
     padding: 0.5rem 1rem;
     /* Add appropriate padding */
     min-height: auto;
