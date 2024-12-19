@@ -7,11 +7,14 @@
       <div>
         <action-button @click="toggleDarkMode" is-small class="mr-3 theme-button">
           <b-icon
-            :icon="isDark ? 'sun' : 'moon'" 
-            :class="{
-              'has-text-warning': isDark,
-              'has-text-info': !isDark,
-            }"
+            v-if="isDark"
+            icon="sun" 
+            class="has-text-warning"
+          />
+          <b-icon
+            v-else
+            icon="moon" 
+            class="has-text-info"
           />
         </action-button>
         <github-button 
@@ -133,14 +136,17 @@ const toggleDarkMode = () => {
   const theme = localStorage.getItem('theme')
 
   if (!theme || theme === '0') {
+    console.log('moving from light', theme)
     isDark.value = true
     document.documentElement.setAttribute('data-theme', 'dark');
     localStorage.setItem('theme', '1')
+    console.log(isDark.value)
   } else {
-    console.log(theme)
+    console.log('moving from dark', theme)
     isDark.value = false
     document.documentElement.setAttribute('data-theme', 'light');
     localStorage.setItem('theme', '0')
+    console.log(isDark.value)
   }
 }
 

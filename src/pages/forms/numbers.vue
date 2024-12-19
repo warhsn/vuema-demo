@@ -71,7 +71,7 @@
                         <tr>
                             <td>placeholder</td>
                             <td>string</td>
-                            <td>NULL</td>
+                            <td>null</td>
                         </tr>
                         <tr>
                             <td>is-rounded</td>
@@ -86,12 +86,12 @@
                         <tr>
                             <td>left-icon</td>
                             <td>string</td>
-                            <td>NULL</td>
+                            <td>null</td>
                         </tr>
                         <tr>
                             <td>right-icon</td>
                             <td>string</td>
-                            <td>NULL</td>
+                            <td>null</td>
                         </tr>
                         <tr>
                             <td>is-small</td>
