@@ -57,7 +57,7 @@ const router = createRouter({
     {
       path: "/forms/password-input",
       name: "password-input",
-      component: () => import("../pages/forms/password-input.vue"),
+      component: () => import("../pages/forms/password-inputs.vue"),
     },
     {
       path: "/forms/select-input",

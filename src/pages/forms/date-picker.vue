@@ -17,7 +17,8 @@
                     <column>
                         <date-picker
                             v-model="date"
-                            :min-date="'2024-05-29'">
+                            :min-date="'2024-01-01'"
+                            :max-date="'2025-12-31'">
                             Start Date
                         </date-picker>
                     </column>
@@ -46,59 +47,24 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>decimals</td>
-                            <td>Integer</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>currency</td>
+                            <td>min-date</td>
                             <td>String</td>
-                            <td>$</td>
+                            <td>null</td>
                         </tr>
                         <tr>
-                            <td>required</td>
+                            <td>max-date</td>
+                            <td>String</td>
+                            <td>null</td>
+                        </tr>
+                        <tr>
+                            <td>format</td>
+                            <td>String</td>
+                            <td>YYYY-MM-DD</td>
+                        </tr>
+                        <tr>
+                            <td>with-icon</td>
                             <td>Boolean</td>
-                            <td>false</td>
-                        </tr>
-                        <tr>
-                            <td>placeholder</td>
-                            <td>string</td>
-                            <td>NULL</td>
-                        </tr>
-                        <tr>
-                            <td>is-rounded</td>
-                            <td>Boolean</td>
-                            <td>false</td>
-                        </tr>
-                        <tr>
-                            <td>is-expanded</td>
-                            <td>Boolean</td>
-                            <td>false</td>
-                        </tr>
-                        <tr>
-                            <td>left-icon</td>
-                            <td>string</td>
-                            <td>NULL</td>
-                        </tr>
-                        <tr>
-                            <td>right-icon</td>
-                            <td>string</td>
-                            <td>NULL</td>
-                        </tr>
-                        <tr>
-                            <td>is-small</td>
-                            <td>Boolean</td>
-                            <td>false</td>
-                        </tr>
-                        <tr>
-                            <td>is-medium</td>
-                            <td>Boolean</td>
-                            <td>false</td>
-                        </tr>
-                        <tr>
-                            <td>is-large</td>
-                            <td>Boolean</td>
-                            <td>false</td>
+                            <td>true</td>
                         </tr>
                     </tbody>
                 </table>
@@ -113,8 +79,10 @@ const date = ref('2024-12-04')
 
 const inputExample = () => {
     return `<date-picker
-    v-model="date">
-    Date
+    v-model="date"
+    :min-date="'2024-01-01'"
+    :max-date="'2025-12-31'">
+    Start Date
 </date-picker>`
 }
 

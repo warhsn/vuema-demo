@@ -31,78 +31,6 @@
                 </columns>
             </column>
         </columns>
-
-        <columns>
-            <column>
-                <h4>Props</h4>
-                <table class="table is-fullwidth">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Type</th>
-                            <th>Default</th>
-                        </tr>
-                    </thead>
-                    <thead>
-                        <tr>
-                            <td>decimals</td>
-                            <td>Integer</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>currency</td>
-                            <td>String</td>
-                            <td>$</td>
-                        </tr>
-                        <tr>
-                            <td>required</td>
-                            <td>Boolean</td>
-                            <td>false</td>
-                        </tr>
-                        <tr>
-                            <td>placeholder</td>
-                            <td>string</td>
-                            <td>NULL</td>
-                        </tr>
-                        <tr>
-                            <td>is-rounded</td>
-                            <td>Boolean</td>
-                            <td>false</td>
-                        </tr>
-                        <tr>
-                            <td>is-expanded</td>
-                            <td>Boolean</td>
-                            <td>false</td>
-                        </tr>
-                        <tr>
-                            <td>left-icon</td>
-                            <td>string</td>
-                            <td>NULL</td>
-                        </tr>
-                        <tr>
-                            <td>right-icon</td>
-                            <td>string</td>
-                            <td>NULL</td>
-                        </tr>
-                        <tr>
-                            <td>is-small</td>
-                            <td>Boolean</td>
-                            <td>false</td>
-                        </tr>
-                        <tr>
-                            <td>is-medium</td>
-                            <td>Boolean</td>
-                            <td>false</td>
-                        </tr>
-                        <tr>
-                            <td>is-large</td>
-                            <td>Boolean</td>
-                            <td>false</td>
-                        </tr>
-                    </thead>
-                </table>
-            </column>
-        </columns>
     </div>
 </template>
 <script setup lang="ts">
@@ -113,9 +41,8 @@ const printValue = (val: any) => {
 
 const inputExample = () => {
     return `<file-input
-    placeholder="55.99"
-    v-model="product.price">
-    Price
+    @selected="handleFileSelection">
+    Profile Picture
 </file-input>`
 }
 

@@ -49,14 +49,9 @@
                     </thead>
                     <thead>
                         <tr>
-                            <td>decimals</td>
-                            <td>Integer</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>currency</td>
-                            <td>String</td>
-                            <td>$</td>
+                            <td>with-toggle</td>
+                            <td>Boolean</td>
+                            <td>false</td>
                         </tr>
                         <tr>
                             <td>required</td>
@@ -66,7 +61,7 @@
                         <tr>
                             <td>placeholder</td>
                             <td>string</td>
-                            <td>NULL</td>
+                            <td>null</td>
                         </tr>
                         <tr>
                             <td>is-rounded</td>
@@ -81,12 +76,12 @@
                         <tr>
                             <td>left-icon</td>
                             <td>string</td>
-                            <td>NULL</td>
+                            <td>null</td>
                         </tr>
                         <tr>
                             <td>right-icon</td>
                             <td>string</td>
-                            <td>NULL</td>
+                            <td>null</td>
                         </tr>
                         <tr>
                             <td>is-small</td>
@@ -115,6 +110,8 @@ const password = ref('')
 
 const inputExample = `<password-input
     required
+    with-toggle
+    is-expanded
     v-model="user.password">
     Password
 </password-input>`

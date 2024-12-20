@@ -48,14 +48,9 @@
                     </thead>
                     <thead>
                         <tr>
-                            <td>decimals</td>
-                            <td>Integer</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>currency</td>
-                            <td>String</td>
-                            <td>$</td>
+                            <td>items</td>
+                            <td>Array</td>
+                            <td>[]</td>
                         </tr>
                         <tr>
                             <td>required</td>
@@ -65,7 +60,7 @@
                         <tr>
                             <td>placeholder</td>
                             <td>string</td>
-                            <td>NULL</td>
+                            <td>null</td>
                         </tr>
                         <tr>
                             <td>is-rounded</td>
@@ -80,12 +75,12 @@
                         <tr>
                             <td>left-icon</td>
                             <td>string</td>
-                            <td>NULL</td>
+                            <td>null</td>
                         </tr>
                         <tr>
                             <td>right-icon</td>
                             <td>string</td>
-                            <td>NULL</td>
+                            <td>null</td>
                         </tr>
                         <tr>
                             <td>is-small</td>

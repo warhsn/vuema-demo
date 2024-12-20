@@ -179,12 +179,11 @@
                             required>
                             Name
                             <template #left>
-                                <action-button
+                                <icon-button
                                     is-rounded
                                     is-medium
-                                    @click="alertClick">
-                                    <b-icon icon="user"/>
-                                </action-button>
+                                    icon="user"
+                                    @click="alertClick" />
                             </template>
                         </text-input>
                     </column>
@@ -197,12 +196,11 @@
                             required>
                             Email
                             <template #right>
-                                <action-button
+                                <icon-button
                                     is-rounded
                                     is-medium
-                                    @click="alertClick">
-                                    <b-icon icon="envelope"/>
-                                </action-button>
+                                    icon="envelope"
+                                    @click="alertClick" />
                             </template>
                         </text-input>
                     </column>

@@ -9,7 +9,8 @@
                         <p>
                             In it's most basic form a <span class="has-text-weight-bold">radio-input</span> component can
                             be used with nothing more than v-model and a
-                            label if required. The default component slot is used for label text.
+                            label if required. The default component slot is used for label text and offers an additional Inner
+                            Label slot.
                         </p>
                     </column>
                 </columns>
@@ -17,8 +18,12 @@
                 <columns>
                     <column>
                         <radio-input 
-                            @input="printValue"
-                            :items="[{id: 1, label: 'Yes'}, {id: 2, label: 'No'}]">
+                            v-model="onOff"
+                            :items="[
+                                {id: 1, label: 'Yes', disabled: false},
+                                {id: 2, label: 'No', disabled: false},
+                                {id: 2, label: 'Unsure', disabled: true},
+                            ]">
                             On or Off?
                             <template #inner-label>Inner Label</template>
                         </radio-input>
@@ -26,99 +31,41 @@
                 </columns>
             </column>
             <column class="is-4">
-                <columns>
-                    <column>
-                        <small>Example</small>
-                        <highlightjs class="is-rounded" language='javascript' :code="inputExample()" />
-                    </column>
-                </columns>
-            </column>
-        </columns>
-
-        <columns>
-            <column>
-                <h4>Props</h4>
-                <table class="table is-fullwidth">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Type</th>
-                            <th>Default</th>
-                        </tr>
-                    </thead>
-                    <thead>
-                        <tr>
-                            <td>decimals</td>
-                            <td>Integer</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>currency</td>
-                            <td>String</td>
-                            <td>$</td>
-                        </tr>
-                        <tr>
-                            <td>required</td>
-                            <td>Boolean</td>
-                            <td>false</td>
-                        </tr>
-                        <tr>
-                            <td>placeholder</td>
-                            <td>string</td>
-                            <td>NULL</td>
-                        </tr>
-                        <tr>
-                            <td>is-rounded</td>
-                            <td>Boolean</td>
-                            <td>false</td>
-                        </tr>
-                        <tr>
-                            <td>is-expanded</td>
-                            <td>Boolean</td>
-                            <td>false</td>
-                        </tr>
-                        <tr>
-                            <td>left-icon</td>
-                            <td>string</td>
-                            <td>NULL</td>
-                        </tr>
-                        <tr>
-                            <td>right-icon</td>
-                            <td>string</td>
-                            <td>NULL</td>
-                        </tr>
-                        <tr>
-                            <td>is-small</td>
-                            <td>Boolean</td>
-                            <td>false</td>
-                        </tr>
-                        <tr>
-                            <td>is-medium</td>
-                            <td>Boolean</td>
-                            <td>false</td>
-                        </tr>
-                        <tr>
-                            <td>is-large</td>
-                            <td>Boolean</td>
-                            <td>false</td>
-                        </tr>
-                    </thead>
-                </table>
+                <small>Example</small>
+                <highlightjs class="is-rounded" language='javascript' :code="inputExample()" />
             </column>
         </columns>
     </div>
 </template>
 <script setup lang="ts">
+import { ref } from 'vue'
 
-const printValue = (val: any) => {
-    console.log(val)
-}
+const onOff = ref(null)
 
 const inputExample = () => {
-    return `<radio-input
-    placeholder="55.99"
-    v-model="product.price">
-    Price
+    return `<radio-input 
+    v-model="onOff"
+    :items="[
+        {
+            id: 1, 
+            label: 'Yes',
+            disabled: false
+        },
+        {
+            id: 2, 
+            label: 'No',
+            disabled: false
+        }
+        {
+            id: 2, 
+            label: 'Unsure',
+            disabled: true
+        }
+    ]">
+    On or Off?
+    <template #inner-label>
+        Inner Label
+    </template>
 </radio-input>`
 }
 
