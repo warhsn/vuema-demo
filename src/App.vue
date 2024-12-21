@@ -1,8 +1,8 @@
 <template>
   <div class="page-wrap">
     <div class="page-header is-flex is-justify-content-space-between is-align-items-center">
-      <div>
-        <p class="logo-text">Vuema</p>
+      <div class="is-flex is-align-items-center">
+        <router-link :to="{ name: 'welcome' }" class="logo-text is-clickable">Vuema</router-link>
       </div>
       <div>
         <action-button @click="toggleDarkMode" is-small class="mr-3 theme-button">
@@ -41,10 +41,10 @@
 
       <side-menu-list>
         <side-menu-list-item>
-          <router-link :to="{ name: 'welcome' }">Welcome</router-link>
+          <router-link active-class="is-active" :to="{ name: 'welcome' }">Welcome</router-link>
         </side-menu-list-item>
         <side-menu-list-item>
-          <router-link :to="{ name: 'installation' }">Installation</router-link>
+          <router-link active-class="is-active" :to="{ name: 'installation' }">Installation</router-link>
         </side-menu-list-item>
       </side-menu-list>
 
@@ -54,7 +54,7 @@
 
       <side-menu-list>
         <side-menu-list-item>
-          <router-link :to="{ name: 'columns' }">Columns</router-link>
+          <router-link active-class="is-active" :to="{ name: 'columns' }">Columns</router-link>
         </side-menu-list-item>
       </side-menu-list>
 
@@ -64,10 +64,10 @@
 
       <side-menu-list>
         <side-menu-list-item>
-          <router-link :to="{ name: 'buttons' }">Buttons</router-link>
+          <router-link active-class="is-active" :to="{ name: 'buttons' }">Buttons</router-link>
         </side-menu-list-item>
         <side-menu-list-item>
-          <router-link :to="{ name: 'dropdown' }">Dropdown</router-link>
+          <router-link active-class="is-active" :to="{ name: 'dropdown' }">Dropdown</router-link>
         </side-menu-list-item>
         
         <side-menu-label>
@@ -75,31 +75,31 @@
         </side-menu-label>
 
         <side-menu-list-item>
-          <router-link :to="{ name: 'text-input' }">Text Input</router-link>
+          <router-link active-class="is-active" :to="{ name: 'text-input' }">Text Input</router-link>
         </side-menu-list-item>
         <side-menu-list-item>
-          <router-link :to="{ name: 'number-input' }">Number Input</router-link>
+          <router-link active-class="is-active" :to="{ name: 'number-input' }">Number Input</router-link>
         </side-menu-list-item>
         <side-menu-list-item>
-          <router-link :to="{ name: 'currency-input' }">Currency Input</router-link>
+          <router-link active-class="is-active" :to="{ name: 'currency-input' }">Currency Input</router-link>
         </side-menu-list-item>
         <side-menu-list-item>
-          <router-link :to="{ name: 'checkbox-input' }">Checkbox Input</router-link>
+          <router-link active-class="is-active" :to="{ name: 'checkbox-input' }">Checkbox Input</router-link>
         </side-menu-list-item>
         <side-menu-list-item>
-          <router-link :to="{ name: 'radio-input' }">Radio Input</router-link>
+          <router-link active-class="is-active" :to="{ name: 'radio-input' }">Radio Input</router-link>
         </side-menu-list-item>
         <side-menu-list-item>
-          <router-link :to="{ name: 'password-input' }">Password Input</router-link>
+          <router-link active-class="is-active" :to="{ name: 'password-input' }">Password Input</router-link>
         </side-menu-list-item>
         <side-menu-list-item>
-          <router-link :to="{ name: 'select-input' }">Select Input</router-link>
+          <router-link active-class="is-active" :to="{ name: 'select-input' }">Select Input</router-link>
         </side-menu-list-item>
         <side-menu-list-item>
-          <router-link :to="{ name: 'file-input' }">File Input</router-link>
+          <router-link active-class="is-active" :to="{ name: 'file-input' }">File Input</router-link>
         </side-menu-list-item>
         <side-menu-list-item>
-          <router-link :to="{ name: 'date-picker' }">Date Picker</router-link>
+          <router-link active-class="is-active" :to="{ name: 'date-picker' }">Date Picker</router-link>
         </side-menu-list-item>
       </side-menu-list>
 
@@ -112,8 +112,8 @@
           <router-link :to="{ name: 'modals' }">Modals & Dialogs</router-link>
           <side-menu-list>
             <side-menu-list-item>
-              <router-link :to="{ name: 'modals' }">Modal</router-link>
-              <router-link :to="{ name: 'dialogs' }">Dialogs</router-link>
+              <router-link active-class="is-active" :to="{ name: 'modals' }">Modal</router-link>
+              <router-link active-class="is-active" :to="{ name: 'dialogs' }">Dialogs</router-link>
             </side-menu-list-item>
           </side-menu-list>
         </side-menu-list-item>

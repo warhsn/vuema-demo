@@ -2,7 +2,7 @@
 
 ### [0.2.0] 2024-12-21
 
-- Introduced an Alert Dialog component.
+- Feature: Introduced an Alert Dialog component.
 - Bug: Disabled Radio item was still selectable.
 - Bug: Dropdown menu not closing when an item is clicked.
 
