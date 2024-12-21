@@ -113,8 +113,7 @@
           <side-menu-list>
             <side-menu-list-item>
               <router-link :to="{ name: 'modals' }">Modal</router-link>
-              <router-link :to="{ name: 'alert-dialogs' }">Alert Dialog</router-link>
-              <router-link :to="{ name: 'confirm-dialogs' }">Confirm Dialog</router-link>
+              <router-link :to="{ name: 'dialogs' }">Dialogs</router-link>
             </side-menu-list-item>
           </side-menu-list>
         </side-menu-list-item>

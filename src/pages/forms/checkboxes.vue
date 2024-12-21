@@ -1,6 +1,7 @@
 <template>
     <div class="content">
         <h1>Checkbox Input</h1>
+        <hr>
         <columns>
             <column>
                 <columns>

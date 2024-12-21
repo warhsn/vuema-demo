@@ -86,13 +86,8 @@ const router = createRouter({
     },
     {
       path: "/dialogs/confirm",
-      name: "confirm-dialogs",
-      component: () => import("../pages/confirm-dialogs.vue"),
-    },
-    {
-      path: "/dialogs/alert",
-      name: "alert-dialogs",
-      component: () => import("../pages/alert-dialogs.vue"),
+      name: "dialogs",
+      component: () => import("../pages/dialogs.vue"),
     },
   ],
 });
