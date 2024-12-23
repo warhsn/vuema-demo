@@ -1,5 +1,14 @@
 # Changelog
 
+### [0.3.0] 2024-12-23
+
+- Feature: Adds in a basic toaster component.
+
+### [0.2.1] 2024-12-23
+
+- Refactor: Ensure Checkbox Input labels are clickable.
+- Bug: Checkbox Input rendering bug.
+
 ### [0.2.0] 2024-12-21
 
 - Feature: Introduced an Alert Dialog component.

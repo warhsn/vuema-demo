@@ -89,6 +89,11 @@ const router = createRouter({
       name: "dialogs",
       component: () => import("../pages/dialogs.vue"),
     },
+    {
+      path: "/toasts",
+      name: "toasts",
+      component: () => import("../pages/toasts.vue"),
+    },
   ],
 });
 

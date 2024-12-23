@@ -117,6 +117,9 @@
             </side-menu-list-item>
           </side-menu-list>
         </side-menu-list-item>
+        <side-menu-list-item>
+          <router-link active-class="is-active" :to="{ name: 'toasts' }">Toasts</router-link>
+        </side-menu-list-item>
       </side-menu-list>
 
     </side-menu>
