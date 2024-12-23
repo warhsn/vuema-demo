@@ -78,36 +78,43 @@
                         </tr>
                     </tbody>
                 </table>
-
-                <columns>
-                    <column>
-                        <h3>Alerts</h3>
-                        <p>A highly configurable confirmation component that supports asyncronous actions. You may optionally pass
-                            a <code>confirming</code> prop that will emit a <code>confirm</code> event and start a loader 
-                            when the confirmation button is clicked.
-                        </p>
-
-                        <alert
-                            title="Payment Processed">
-                            <template #trigger>
-                                <action-button is-info>Click to Alert</action-button>
-                            </template>
-                            <p>
-                                Your payment has been successfully processed.
-                            </p>
-                        </alert>
-                    </column>
-                </columns>
             </column>
             <column is-4>
                 <small>Example</small>
                 <highlightjs class="is-rounded" language='javascript' :code="codeExample()" />
             </column>
         </columns>
+
+        <columns>
+            <column>
+                <h3>Alerts</h3>
+                <p>The Alert component provides a simple interface for alert dialogs. It exposes a <code>title</code> prop
+                    and the main message is passed into the default slot. As with the Confirm Dialog it allows you to customise
+                    the trigger.
+                </p>
+
+                <alert
+                    title="Payment Processed">
+                    <template #trigger>
+                        <action-button is-info>Click to Alert</action-button>
+                    </template>
+                    <p>
+                        Your payment has been successfully processed.
+                    </p>
+                </alert>
+            </column>
+            <column is-4>
+                <small>Example</small>
+                <highlightjs class="is-rounded" language='javascript' :code="alertExample()" />
+            </column>
+        </columns>
     </div>
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useToaster } from '@warhsn/vuema'
+
+const toaster = useToaster()
 
 const confirming = ref(false)
 const open = ref(false)
@@ -117,6 +124,7 @@ function processConfirmation() {
     setTimeout(() => {
         confirming.value = false
         open.value = false
+        toaster.success('Process Completed')
     }, 1500)
 }
 
@@ -136,6 +144,22 @@ const codeExample = () => {
     Are you sure you want to
     proceed with this action?
 </confirm>`
+}
+
+const alertExample = () => {
+    return `<alert
+    title="Payment Processed">
+    <template #trigger>
+        <action-button 
+            is-info>
+            Click to Alert
+        </action-button>
+    </template>
+    <p>
+        Your payment has been 
+        successfully processed.
+    </p>
+</alert>`
 }
 
 </script>

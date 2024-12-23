@@ -26,7 +26,7 @@
     "vue-router": "^4.1.5"
   },
   "devDependencies": {
-    "@billow/vue-bulma": "file:../vue-bulma-4",
+    "@warhsn/vuema": "file:../vue-bulma-4",
     "@rushstack/eslint-patch": "^1.1.4",
     "@types/jsdom": "^20.0.0",
     "@types/node": "^16.11.68",

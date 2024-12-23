@@ -2,7 +2,7 @@
   <div class="page-wrap">
     <div class="page-header is-flex is-justify-content-space-between is-align-items-center">
       <div class="is-flex is-align-items-center">
-        <router-link :to="{ name: 'welcome' }" class="logo-text is-clickable">Vuema</router-link>
+        <router-link :to="{ name: 'installation' }" class="logo-text is-clickable">Vuema</router-link>
       </div>
       <div>
         <action-button @click="toggleDarkMode" is-small class="mr-3 theme-button">
@@ -35,16 +35,9 @@
       <RouterView />
     </main>
     <side-menu class="page-sidebar">
-      <side-menu-label>
-        General
-      </side-menu-label>
-
       <side-menu-list>
         <side-menu-list-item>
-          <router-link active-class="is-active" :to="{ name: 'welcome' }">Welcome</router-link>
-        </side-menu-list-item>
-        <side-menu-list-item>
-          <router-link active-class="is-active" :to="{ name: 'installation' }">Installation</router-link>
+          <router-link active-class="is-active" :to="{ name: 'installation' }">Quick Start</router-link>
         </side-menu-list-item>
       </side-menu-list>
 

@@ -3,9 +3,9 @@ import { createPinia } from "pinia"
 import hljsVuePlugin from "@highlightjs/vue-plugin";
 import App from "./App.vue"
 import router from "./router"
-import VueBulma from '@billow/vue-bulma'
+import VueBulma from '@warhsn/vuema'
 import "./assets/theme/app.scss"
-import '../node_modules/@billow/vue-bulma/dist/style.css'
+import '@warhsn/vuema/style.css'
 import 'highlight.js/styles/github-dark.css'
 import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript'

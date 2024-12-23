@@ -6,18 +6,13 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "welcome",
-      component: Welcome,
+      name: "installation",
+      component: () => import("../pages/installation.vue"),
     },
     {
       path: "/basics/columns",
       name: "columns",
       component: () => import("../pages/basics/columns.vue"),
-    },
-    {
-      path: "/installation",
-      name: "installation",
-      component: () => import("../pages/installation.vue"),
     },
     {
       path: "/buttons",
