@@ -1,8 +1,7 @@
-import { createRouter, createWebHistory } from "vue-router";
-import Welcome from "../pages/welcome.vue";
+import { createRouter, createWebHistory } from "vue-router"
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory('/vuema-demo/'),
   routes: [
     {
       path: "/",
