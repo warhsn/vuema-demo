@@ -1,0 +1,1 @@
+import{d as c,o as n,c as l,j as a}from"./index.d68be814.js";const m=c({__name:"dropdown-item",emits:["click"],setup(d,{emit:o}){const t=o;return(s,e)=>(n(),l("div",{onClick:e[0]||(e[0]=i=>t("click")),class:"dropdown-item"},[a(s.$slots,"default")]))}});export{m as default};

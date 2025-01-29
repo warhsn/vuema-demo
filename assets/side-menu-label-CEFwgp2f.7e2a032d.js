@@ -1,0 +1,1 @@
+import{k as o,o as s,c as t,j as a}from"./index.d68be814.js";const l={},n={class:"menu-label"};function r(e,c){return s(),t("p",n,[a(e.$slots,"default")])}const u=o(l,[["render",r]]);export{u as default};
