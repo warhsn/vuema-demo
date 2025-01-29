@@ -4,7 +4,6 @@ import vue from "@vitejs/plugin-vue";
 import ImportProps from 'unplugin-vue-import-props/vite';
 import { resolve } from 'path';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   base: '/vuema/',  // Add this line for GitHub Pages
   plugins: [
