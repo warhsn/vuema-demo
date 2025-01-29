@@ -19,7 +19,7 @@
           />
         </action-button>
         <github-button 
-          href="https://github.com/warhsn/payfast" 
+          href="https://github.com/warhsn/vuema" 
           data-color-scheme="no-preference: light; light: light; dark: dark;" 
           data-size="large" 
           data-show-count="true" 
