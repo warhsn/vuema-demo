@@ -17,19 +17,19 @@
                     <action-button 
                         is-small
                         @click="toggleProcessing" 
-                        :processing="data.processing">
+                        :loading="data.processing">
                         Small Button
                     </action-button>
                     <action-button 
                         is-medium
                         @click="toggleProcessing" 
-                        :processing="data.processing">
+                        :loading="data.processing">
                         Medium Button
                     </action-button>
                     <action-button 
                         is-large
                         @click="toggleProcessing" 
-                        :processing="data.processing">
+                        :loading="data.processing">
                         Large Button
                     </action-button>
                 </buttons>
@@ -49,7 +49,7 @@
                         <submit-button 
                             left-icon="paper-plane"
                             @submit="toggleProcessing" 
-                            :processing="data.processing">
+                            :loading="data.processing">
                             Submit Me
                         </submit-button>
                     </column>
@@ -104,13 +104,13 @@
                         is-rounded
                         left-icon="user"
                         @click="toggleProcessing" 
-                        :processing="data.processing">
+                        :loading="data.processing">
                         Users
                     </action-button>
                     <action-button 
                         is-rounded
                         @click="toggleProcessing"
-                        :processing="data.processing">
+                        :loading="data.processing">
                         Action Button
                     </action-button>
                 </buttons>
@@ -238,7 +238,7 @@
                             <td>Font Awesome Regular</td>
                         </tr>
                         <tr>
-                            <td>processing</td>
+                            <td>loading</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
@@ -270,28 +270,28 @@ import { reactive } from 'vue';
         return `<action-button 
     is-small is-danger
     @click="processing = true" 
-    :processing="${data.processing}">
+    :loading="${data.processing}">
     Small Button
 </action-button>
 
 <action-button 
     is-medium is-warning
     @click="processing = true" 
-    :processing="${data.processing}">
+    :loading="${data.processing}">
     Medium Button
 </action-button>
 
 <action-button 
     is-large is-success
     @click="processing = true" 
-    :processing="${data.processing}">
+    :loading="${data.processing}">
     Large Button
 </action-button>
 
 <submit-button 
     right-icon="user"
     @submit="toggleProcessing" 
-    :processing="${data.processing}">
+    :loading="${data.processing}">
     Submit Me
 </submit-button>`
     }
@@ -304,13 +304,13 @@ const buttonAddonsExample = () => {
         is-rounded
         left-icon="user"
         @click="toggleProcessing" 
-        :processing="${data.processing}">
+        :loading="${data.processing}">
         Users
     </action-button>
     <action-button 
         is-rounded
         @click="toggleProcessing"
-        :processing="${data.processing}">
+        :loading="${data.processing}">
         Action Button
     </action-button>
 </buttons>`
