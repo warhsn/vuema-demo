@@ -10,26 +10,26 @@
                 <h4>Action Button</h4>
                 <p>
                     Action buttons serve as versatile interaction components. Size and style customization is facilitated through props. 
-                    The 'loading' prop enables you to manage the loading 
+                    The 'processing' prop enables you to manage the loading 
                     state of the button dynamically. Icons can be positioned on the left or right using the 'left-icon' or 'right-icon' props.
                 </p>
                 <buttons>
                     <action-button 
                         is-small
                         @click="toggleProcessing" 
-                        :loading="data.processing">
+                        :processing="data.processing">
                         Small Button
                     </action-button>
                     <action-button 
                         is-medium
                         @click="toggleProcessing" 
-                        :loading="data.processing">
+                        :processing="data.processing">
                         Medium Button
                     </action-button>
                     <action-button 
                         is-large
                         @click="toggleProcessing" 
-                        :loading="data.processing">
+                        :processing="data.processing">
                         Large Button
                     </action-button>
                 </buttons>
@@ -49,7 +49,7 @@
                         <submit-button 
                             left-icon="paper-plane"
                             @submit="toggleProcessing" 
-                            :loading="data.processing">
+                            :processing="data.processing">
                             Submit Me
                         </submit-button>
                     </column>
@@ -104,13 +104,13 @@
                         is-rounded
                         left-icon="user"
                         @click="toggleProcessing" 
-                        :loading="data.processing">
+                        :processing="data.processing">
                         Users
                     </action-button>
                     <action-button 
                         is-rounded
                         @click="toggleProcessing"
-                        :loading="data.processing">
+                        :processing="data.processing">
                         Action Button
                     </action-button>
                 </buttons>
@@ -238,7 +238,7 @@
                             <td>Font Awesome Regular</td>
                         </tr>
                         <tr>
-                            <td>loading</td>
+                            <td>processing</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
@@ -270,28 +270,28 @@ import { reactive } from 'vue';
         return `<action-button 
     is-small is-danger
     @click="processing = true" 
-    :loading="${data.processing}">
+    :processing="${data.processing}">
     Small Button
 </action-button>
 
 <action-button 
     is-medium is-warning
     @click="processing = true" 
-    :loading="${data.processing}">
+    :processing="${data.processing}">
     Medium Button
 </action-button>
 
 <action-button 
     is-large is-success
     @click="processing = true" 
-    :loading="${data.processing}">
+    :processing="${data.processing}">
     Large Button
 </action-button>
 
 <submit-button 
     right-icon="user"
     @submit="toggleProcessing" 
-    :loading="${data.processing}">
+    :processing="${data.processing}">
     Submit Me
 </submit-button>`
     }
@@ -304,13 +304,13 @@ const buttonAddonsExample = () => {
         is-rounded
         left-icon="user"
         @click="toggleProcessing" 
-        :loading="${data.processing}">
+        :processing="${data.processing}">
         Users
     </action-button>
     <action-button 
         is-rounded
         @click="toggleProcessing"
-        :loading="${data.processing}">
+        :processing="${data.processing}">
         Action Button
     </action-button>
 </buttons>`
