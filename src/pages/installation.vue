@@ -41,7 +41,7 @@
 <script lang="ts" setup>
 const installCode = `import { createApp } from 'vue'
 import VueBulma from '@warhsn/vuema'
-import '@warhsn/vuema/style.css'
+import '@warhsn/vuema/vuema.css'
 
 const app = createApp(App)
 app.use(VueBulma)`
