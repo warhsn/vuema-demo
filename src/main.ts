@@ -5,7 +5,7 @@ import App from "./App.vue"
 import router from "./router"
 import VueBulma from '@warhsn/vuema'
 import "./assets/theme/app.scss"
-import '@warhsn/vuema/style.css'
+import '@warhsn/vuema/vuema.css'
 import 'highlight.js/styles/github-dark.css'
 import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript'
